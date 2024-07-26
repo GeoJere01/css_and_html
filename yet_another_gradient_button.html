@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 1em 2em;
+            background-color: rgb(26, 25, 25);
+            border: none;
+            color: lightgray;
+            border-radius: 1000px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button::after {
+            content: "";
+            position: absolute;
+            border-radius: 1000px;
+            background-image: linear-gradient(to bottom left, red, yellow);
+            height: 109%;
+            width: 103%;
+            z-index: -1;
+        }
+         button:hover {
+            z-index: 0;
+            color: black;
+            box-shadow: 40px 0 100px red, -40px 0 100px yellow;
+         }
+        
+    </style>
+</head>
+<body>
+    <button type="submit">LOGIN</button>
+</body>
+</html>
