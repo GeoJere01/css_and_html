@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>block, inline and inline-block</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=poppins&display=swap");
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            --color: #333333;
+            --border-color: rgba(0,0,0,0.24);
+            font-family: "Poppins", Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+            margin: 0.3rem;
+        }
+
+        .container {
+            padding: 0.6rem;
+        }
+
+        .block {
+            border: 1px solid var(--border-color);
+            padding: 0.8rem;
+            margin-bottom: 0.4rem;
+            box-shadow: rgba(0,0,0,0.24);
+        }
+
+        .inline {
+            border: 1px solid rgba(0,0,0,0.24);
+            padding: 0.6rem;
+            box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+        }
+
+        a {
+            height: 6rem;
+            color: var(--color);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4 class="block">This is a heading</h4>
+        <p class="block">This is a paragraph</p>
+        <div class="block">Text in a div</div>
+        <div class="block">
+            <span class="inline">This is a span element</span>
+            <a href="#" class="inline">anchor</a>
+        </div>
+    </div>
+</body>
+</html>
